@@ -1,0 +1,113 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #FFFFFF;
+  --foreground: #1d1d1d;
+  --clr1: #FFFFFF; /* Blanco - Fondo - Fondo Botones Alternativo - Fondo Tarjetas - Texto Botones - Borde Botones */
+  --clr2: #95a5a6; /* Gris -  */
+  --clr3: #333333; /* Gris Oscuro - Texto Terciario */
+  --clr4: #1d1d1d; /* Negro - Texto - Bordes - Texto Botones Alternativo - Fondo Botones - Borde Botones Alternativo */
+  --clr5: #2c3e50; /* Negro Flat color */
+  --clr6: #3eb34b; /* Verde - Éxitos */
+  --clr7: #cb3327; /* Rojo - Color Acento */
+  --clr8: #ffc41d; /* Amarillo - Enfasis especiales */
+
+  /* Colores específicos para modo oscuro */
+  --dbackground: #1d1d1d;
+  --dforeground: #e0e0e0;
+  --dclr1: #2c2c2c; /* Fondo oscuro */
+  --dclr2: #bdc3c7; /* Gris claro */
+  --dclr3: #bdc3c7; /* Texto claro */
+  --dclr4: #f0f0f0; /* Texto muy claro */
+  --dclr5: #6E8FAF; /* Negro Flat oscuro */
+  --dclr6: #2A7A33; /* Verde claro */
+  --dclr7: #9A261D; /* Rojo claro */
+  --dclr8: #d59f0b; /* Amarillo claro */
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-roboto-slab), serif;
+}
+
+.taggbox {width:100%;overflow:auto;border:none;}
+
+.filtro-dark {filter:invert(90%)}
+
+/* Estilos para encabezados */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-inika), serif;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+/* Specific Utility Classes */
+  .header-logo {
+    height: 60px;
+    width: auto;
+    margin: 8px;
+  }
+  .header-nuamana {
+    font-weight: 700;
+  }
+  .header-text-box {
+    margin-top: -4px;
+  }
+  .header-rrss {
+    gap: 1em;
+  }
+  .header-acceder {
+    font-size: 10em;
+    font-weight: 600;
+  }
+  .menu-logo {
+    height: 60px;
+    width: auto;
+  }
+  
+  /* Sidebar Drawer Styles */
+  .sidebar-overlay {
+    font-family: "Roboto Slab", serif;
+  }
+
+  /* Estilos para scrollbars personalizados */
+
+  /* Default (light mode) scrollbar styles */
+:root {
+  scrollbar-width: thin;
+  scrollbar-color: #cb3327 #ffffff; /* thumb color track color */
+}
+
+/* Dark mode scrollbar styles */
+.dark {
+  scrollbar-color: #cb3327 #1d1d1d; /* dark thumb color dark track color */
+}
+
+/* Default (light mode) scrollbar styles */
+/* For Webkit browsers */
+::-webkit-scrollbar {
+  width: 8px; /* Adjust as needed */
+}
+
+::-webkit-scrollbar-track {
+  background: #FFFFFF; /* Light track color */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cb3327; /* Light thumb color */
+  border-radius: 4px;
+}
+
+/* Dark mode scrollbar styles */
+.dark ::-webkit-scrollbar-track {
+  background: #1d1d1d; /* Dark track color */
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #cb3327; /* Dark thumb color */
+}
